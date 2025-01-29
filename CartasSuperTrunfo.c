@@ -1,36 +1,44 @@
 #include <stdio.h>
 
-int main(){
-float  populacao, pib, area;
-char cidade [50], codigo[10], pais[50];   //adicionando variáveis
+int main() {
+    float populacao, pib, area;
+    char cidade[50], codigo[10], pais[50];
 
-//leitura e inserção de dados das cartas
-printf("Digite a cidade: \n");
-scanf("%s", &cidade);
+    // Solicita e lê os dados do usuário
+    printf("Digite a cidade: \n");
+    scanf("%s", cidade);
 
-printf("Digite Código: \n");
-scanf("%s", &codigo);
+    printf("Digite o código: \n");
+    scanf("%s", codigo);
 
-printf("Digite País: \n");
-scanf("%s", &pais);
+    printf("Digite o país: \n");
+    scanf("%s", pais);
 
-printf("Digite área em km2: \n");
-scanf("%f", &area);
+    printf("Digite a área em km²: \n");
+    scanf("%f", &area);
 
-printf("Digite População 'm': \n");
-scanf("%f", &populacao);
+    printf("Digite a população (em milhões): \n");
+    scanf("%f", &populacao);
 
-printf("Digite o PIB 'bi U$$': \n");
-scanf("%f", &pib);
+    printf("Digite o PIB (em bilhões de US$): \n");
+    scanf("%f", &pib);
 
-//leitura final de todos os dados da carta
-printf("Cidade: %s \n", cidade);
-printf("Código: %s \n", codigo);
-printf("País: %s \n", pais);
-printf("Área em km2: %f \n", area);
-printf("População'm': %f \n", populacao);
-printf("PIB 'bi U$$': %f \n", pib);
+    // Cálculos automáticos
+    float densidade_populacional = populacao / area; // Densidade populacional
+    float pib_per_capita = pib / populacao;          // PIB per capita
 
+    // Exibe os dados informados
+    printf("\nDados informados:\n");
+    printf("Cidade: %s\n", cidade);
+    printf("Código: %s\n", codigo);
+    printf("País: %s\n", pais);
+    printf("Área em km²: %f\n", area);
+    printf("População (em milhões): %f\n", populacao);
+    printf("PIB (em bilhões de US$): %f\n", pib);
 
-return 0;
+    // Exibe os cálculos
+    printf("Densidade Populacional (hab/km²): %f\n", densidade_populacional);
+    printf("PIB per Capita (US$ por habitante): %f\n", pib_per_capita);
+
+    return 0;
 }
