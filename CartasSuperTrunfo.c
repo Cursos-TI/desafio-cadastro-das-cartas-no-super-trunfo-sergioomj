@@ -2,8 +2,9 @@
 
 int main(){
 float  populacao, pib, area;
-char cidade [50], codigo[10], pais[50];
+char cidade [50], codigo[10], pais[50];   //adicionando variáveis
 
+//leitura e inserção de dados das cartas
 printf("Digite a cidade: \n");
 scanf("%s", &cidade);
 
@@ -22,6 +23,7 @@ scanf("%f", &populacao);
 printf("Digite o PIB 'bi U$$': \n");
 scanf("%f", &pib);
 
+//leitura final de todos os dados da carta
 printf("Cidade: %s \n", cidade);
 printf("Código: %s \n", codigo);
 printf("País: %s \n", pais);
